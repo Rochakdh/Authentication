@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
-
+from .validators import contactNumberValidator
 USER = get_user_model()
 
 
@@ -21,6 +21,7 @@ class customUsersDetailSearializers(serializers.ModelSerializer):
         model = USER
         fields = ['id', 'username', 'email', 'contactNumber', 'password', 'secondPassword']
         read_only_fields = ['id']
+        validators = [contactNumberValidator()]
         extra_kwargs = {
             'password': {
                 'max_length': 128,
