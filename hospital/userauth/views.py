@@ -17,3 +17,10 @@ class UserViewSet(ModelViewSet):
     queryset = USER.objects.all()
     lookup_field = 'id'
     lookup_url_kwarg = 'id'
+
+    def get_queryset(self):
+        """
+        :return: filtered queryset of the user itself only
+        """
+        super(UserViewSet, self).get_queryset()
+        return self.queryset.filter(id = self.request.user.id)
