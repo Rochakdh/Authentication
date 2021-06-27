@@ -7,6 +7,7 @@ from .models import customUseraDetails
 # Create your views here.
 USER = get_user_model()
 
+
 class UserViewSet(ModelViewSet):
     """
     ViewSet for CRUD of USER object

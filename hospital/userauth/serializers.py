@@ -7,8 +7,8 @@ USER = get_user_model()
 class customUsersDetailSearializers(serializers.ModelSerializer):
     """ Custom User Model Searilizers for Signing Up Form"""
 
-    #secondPassword is not attribute of the USER model.
-    #secondPassword is defined here as write_only_field only will only be  applicable to model's attribute
+    # secondPassword is not attribute of the USER model.
+    # secondPassword is defined here as write_only_field only will only be  applicable to model's attribute
 
     secondPassword = serializers.CharField(
         label='Confirm Password',

@@ -3,4 +3,4 @@ from django.contrib.auth.admin import UserAdmin
 from .models import customUseraDetails
 
 # Register your models here.
-admin.site.register(customUseraDetails,UserAdmin)
+admin.site.register(customUseraDetails, UserAdmin)
