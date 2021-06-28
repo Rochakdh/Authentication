@@ -7,4 +7,4 @@ from django.contrib.auth.models import AbstractUser
 class customUseraDetails(AbstractUser):
     """Custom User Model where id and contactNumber is included"""
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    contactNumber = models.CharField(max_length=10)
+    contactNumber = models.CharField(max_length=15)

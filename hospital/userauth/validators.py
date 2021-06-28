@@ -4,7 +4,9 @@ from .constants import CONTACT_NUMBER_SIZE
 
 class contactNumberValidator:
 
-    def __call__(self, contactNumber):
+    def __call__(self, orderedValuesDict):
+        contactNumber = orderedValuesDict.get('contactNumber')
+        print(contactNumber)
         if contactNumber is None:  # for not showing default error message of not null
             message = "Enter your Contact Number"
             raise serializers.ValidationError(message)

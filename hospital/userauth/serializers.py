@@ -1,11 +1,13 @@
 from rest_framework import serializers
+
 from django.contrib.auth import get_user_model
 from .validators import contactNumberValidator
+
 USER = get_user_model()
 
 
 class customUsersDetailSearializers(serializers.ModelSerializer):
-    """ Custom User Model Searilizers for Signing Up Form"""
+    """ Custom User Model Searilizers for Signing In Form"""
 
     # secondPassword is not attribute of the USER model.
     # secondPassword is defined here as write_only_field only will only be  applicable to model's attribute
